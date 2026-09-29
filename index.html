@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aleena Seby | Portfolio</title>
+<style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+        margin: 0;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        background: #f7f5ed;
+        color: #252525;
+        line-height: 1.6;
+    }
+    .page {
+        max-width: 1000px;
+        margin: 25px auto;
+        background: #fffef8;
+        border: 3px solid #343434;
+        box-shadow: 8px 8px 0 #e7dfd2;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 28px;
+        border-bottom: 3px solid #343434;
+        position: sticky;
+        top: 0;
+        background: #fffef8;
+        z-index: 10;
+    }
+    .logo {
+        font-size: 27px;
+        font-weight: bold;
+        color: #ef721f;
+        text-decoration: underline;
+    }
+    nav a {
+        color: #252525;
+        text-decoration: none;
+        margin-left: 18px;
+        font-weight: bold;
+    }
+    nav a:hover, nav a.active { color: #ef721f; text-decoration: underline; }
+
+    section { padding: 38px 45px; border-bottom: 3px solid #343434; }
+    section:last-child { border-bottom: none; }
+
+    .hero {
+        min-height: 390px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .hero-text { max-width: 650px; }
+    h1 {
+        font-size: clamp(34px, 6vw, 58px);
+        margin: 0 0 8px;
+    }
+    h1 span { color: #c94bb5; }
+    .subtitle {
+        font-size: 24px;
+        margin: 5px 0 22px;
+        text-decoration: underline;
+        text-decoration-color: #c94bb5;
+        text-underline-offset: 7px;
+    }
+    .intro { font-size: 19px; color: #666; max-width: 620px; }
+    .button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 18px;
+        border: 2px solid #343434;
+        background: #f5c9df;
+        color: #252525;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 4px 4px 0 #343434;
+    }
+    .avatar {
+        width: 170px;
+        height: 170px;
+        border: 4px solid #343434;
+        background: #ffe600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+        transform: rotate(1deg);
+        flex-shrink: 0;
+    }
+
+    .title {
+        margin: 0 0 22px;
+        color: #ef721f;
+        font-size: 29px;
+        text-decoration: underline;
+        text-underline-offset: 7px;
+    }
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 35px;
+    }
+    .facts {
+        border-left: 2px solid #343434;
+        padding-left: 25px;
+    }
+    .fact { margin: 12px 0; }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        text-align: center;
+    }
+    .skill {
+        padding: 18px 10px;
+        border: 2px solid transparent;
+    }
+    .skill-icon { font-size: 48px; }
+    .skill h3 { margin: 8px 0 0; }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    .project {
+        border: 2px solid #343434;
+        padding: 22px;
+        min-height: 150px;
+        background: #faf7ee;
+    }
+    .project h3 { margin-top: 0; color: #ef721f; }
+    .project p { color: #666; }
+
+    .contact {
+        display: flex;
+        gap: 55px;
+        flex-wrap: wrap;
+    }
+    .contact a {
+        color: #252525;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .contact-item { text-align: center; }
+    .contact-icon { font-size: 35px; display: block; margin-bottom: 4px; }
+
+    footer {
+        text-align: center;
+        padding: 18px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+        .page { margin: 0; border-width: 2px; }
+        nav { flex-direction: column; gap: 12px; padding: 15px; }
+        nav a { margin: 0 7px; font-size: 14px; }
+        section { padding: 30px 22px; }
+        .hero { flex-direction: column-reverse; text-align: center; }
+        .about-grid, .skills, .projects { grid-template-columns: 1fr; }
+        .facts { border-left: none; border-top: 2px solid #343434; padding: 18px 0 0; }
+        .contact { justify-content: center; }
+    }
+</style>
+</head>
+<body>
+
+<div class="page">
+    <nav>
+        <a class="logo" href="#home">MY PORTFOLIO</a>
+        <div>
+            <a class="active" href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Aleena Seby!</span></h1>
+            <div class="subtitle">BCA Cybersecurity Student</div>
+            <p class="intro">Passionate about learning new technologies and building creative solutions.</p>
+            <a class="button" href="#contact">DOWNLOAD CV</a>
+        </div>
+        <div class="avatar" aria-label="Profile illustration">👩🏻‍💻</div>
+    </section>
+
+    <section id="about">
+        <h2 class="title">👥 ABOUT ME</h2>
+        <div class="about-grid">
+            <p>
+                I am a BCA student with interest in cybersecurity, programming
+                and web development.
+            </p>
+            <div class="facts">
+                <div class="fact">📅 <strong>Education:</strong> BCA (Cybersecurity)</div>
+                <div class="fact">📍 <strong>Location:</strong> Kerala, India</div>
+                <div class="fact">✉️ <strong>Email:</strong> aleena7@gmail.com</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="title">SKILLS</h2>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-icon">C</div>
+                <h3>C Programming</h3>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">&lt;/&gt;</div>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">🛡️</div>
+                <h3>Cybersecurity</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="title">PROJECTS</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Add your first project description here.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Add your second project description here.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Add your third project description here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="title">CONTACT ME</h2>
+        <div class="contact">
+            <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <a href="mailto:aleena7@gmail.com">Email</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">in</span>
+                <a href="#" onclick="return false;">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <a href="#" onclick="return false;">Phone</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>© 2026 Aleena Seby • Personal Portfolio</footer>
+</div>
+
+</body>
+</html>
